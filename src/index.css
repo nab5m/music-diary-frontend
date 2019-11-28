@@ -3,7 +3,8 @@
   margin: 0;
 }
 body {
-  font-family: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, sans-serif;
+  /*font-family: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, sans-serif;j*/
+  font-family: 'Gamja Flower', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

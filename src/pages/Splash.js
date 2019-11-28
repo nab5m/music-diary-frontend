@@ -7,11 +7,11 @@ function Splash ({history}) {
             history.push('/home');
         }, 2000);
         return () => clearTimeout(timer);
-    }, []);
+    }, [history]);
 
     return (
         <SplashContainer>
-            <SplashImage src="/splash.gif" alt="스플래시_로고"/>
+            <SplashImage src="/splash2.gif" alt="스플래시_로고"/>
             <Copyright>
                 &copy; 2019 nab5m, All rights reserved.
             </Copyright>
@@ -28,6 +28,7 @@ const SplashContainer = styled.div`
     height: 100vh;
     overflow: hidden;
     background-color: #f7fbfe;
+    font-family: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, sans-serif;
 `;
 
 const SplashImage = styled.img`

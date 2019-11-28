@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { DefaultAppBar } from "../components/AppBar";
-import Diary from "../components/Diary";
 
-const Home = ({match}) => {
+const Calendar = ({match}) => {
     return (
         <Container>
             <DefaultAppBar url={match.url} />
 
-            <Diary />
+            달력
 
             <FloatingActionButton>
                 <FloatingIcon icon={faPencilAlt} />
@@ -52,4 +51,4 @@ const FloatingActionButton = styled.div`
     `}
 `;
 
-export default Home;
+export default Calendar;
