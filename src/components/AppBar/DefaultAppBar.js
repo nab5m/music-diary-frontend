@@ -4,32 +4,41 @@ import styled from 'styled-components';
 const DefaultAppBar = ({url}) => {
     return (
         <Container>
-            <AppTitle>
-                <AppTitleBossyPink>노래</AppTitleBossyPink>
-                <AppTitleBlueberryPancake> 일기</AppTitleBlueberryPancake>
-            </AppTitle>
-            <Navigation>
-                <IconButton href="/home">
-                    <Icon src="/icons/HomeIcon2.svg" alt="홈_아이콘" color="pink" isActive={url === "/home"}/>
-                </IconButton>
-                <IconButton href="/play-list-manager">
-                    <Icon src="/icons/PlayList4.svg" alt="목록_아이콘" color="blue" isActive={url === "/play-list-manager"}/>
-                </IconButton>
-                <IconButton href="/calendar">
-                    <Icon src="/icons/calendar_today.svg" alt="달력_아이콘" color="pink" isActive={url === "/calendar"}/>
-                </IconButton>
-                <IconButton href="/friends">
-                    <Icon src="/icons/FriendsIcon.svg" alt="친구_아이콘" color="blue" isActive={url === "/friends"}/>
-                </IconButton>
-                <IconButton href="/settings">
-                    <Icon src="/icons/settings.svg" alt="설정_아이콘" color="pink" isActive={url === "/settings"}/>
-                </IconButton>
-            </Navigation>
+            <Wrapper>
+                <AppTitle>
+                    <AppTitleBossyPink>노래</AppTitleBossyPink>
+                    <AppTitleBlueberryPancake> 일기</AppTitleBlueberryPancake>
+                </AppTitle>
+                <Navigation>
+                    <IconButton href="/home">
+                        <Icon src="/icons/HomeIcon2.svg" alt="홈_아이콘" color="pink" isActive={url === "/home"}/>
+                    </IconButton>
+                    <IconButton href="/play-list-manager">
+                        <Icon src="/icons/PlayList4.svg" alt="목록_아이콘" color="blue" isActive={url === "/play-list-manager"}/>
+                    </IconButton>
+                    <IconButton href="/calendar">
+                        <Icon src="/icons/calendar_today.svg" alt="달력_아이콘" color="pink" isActive={url === "/calendar"}/>
+                    </IconButton>
+                    <IconButton href="/friends">
+                        <Icon src="/icons/FriendsIcon.svg" alt="친구_아이콘" color="blue" isActive={url === "/friends"}/>
+                    </IconButton>
+                    <IconButton href="/settings">
+                        <Icon src="/icons/settings.svg" alt="설정_아이콘" color="pink" isActive={url === "/settings"}/>
+                    </IconButton>
+                </Navigation>
+            </Wrapper>
         </Container>
     );
 };
 
 const Container = styled.div`
+    height: 80px;
+`;
+const Wrapper = styled.div`
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    z-index: 1000;
 `;
 
 const Navigation = styled.div`

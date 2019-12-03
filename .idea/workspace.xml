@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Gallery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/calendar/DailyCalendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/calendar/MonthlyCalendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Gallery1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Gallery1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Gallery2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Gallery2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Gallery3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Gallery3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Diary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppBar/DefaultAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/DefaultAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Diary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +43,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/calendar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -50,7 +54,11 @@
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\home" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\calendar" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\public" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\public\icons" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\pages" />
@@ -94,7 +102,10 @@
       <updated>1574784079139</updated>
       <workItem from="1574784081104" duration="3978000" />
       <workItem from="1574936534619" duration="13073000" />
-      <workItem from="1575038900595" duration="1979000" />
+      <workItem from="1575038900595" duration="3059000" />
+      <workItem from="1575102049438" duration="705000" />
+      <workItem from="1575103936976" duration="10899000" />
+      <workItem from="1575370464628" duration="9468000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -103,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574954809063</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Gallery Button&#10;&#10;: handleClickIcon(&quot;left&quot; or &quot;right&quot;)">
+      <created>1575044404376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575044404376</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +144,7 @@
     <MESSAGE value="Initial Project structure" />
     <MESSAGE value="DefaultAppBar" />
     <MESSAGE value="MainLayout&#10;&#10; draw icons and add picture :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainLayout&#10;&#10; draw icons and add picture :)" />
+    <MESSAGE value="Gallery Button&#10;&#10;: handleClickIcon(&quot;left&quot; or &quot;right&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gallery Button&#10;&#10;: handleClickIcon(&quot;left&quot; or &quot;right&quot;)" />
   </component>
 </project>

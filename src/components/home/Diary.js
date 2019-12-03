@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Gallery from "./Gallery";
 
-const Diary = () => {
+const Diary = ({height="calc(100vh - 140px)", dateDisplay = "block",
+                   weatherPosition, weatherTop, weatherLeftAndRight}) =>
+{
     return (
-        <Container>
-            <Date>2019년 11월 26일</Date>
+        <Container height={height}>
+            <Date style={{display: dateDisplay}}>2019년 11월 26일</Date>
 
-            <Weather>
+            <Weather position={weatherPosition} top={weatherTop} leftAndRight={weatherLeftAndRight}>
                 <img src="/icons/sunny.gif" alt="날씨" width="45" height="45"/>
             </Weather>
 
@@ -20,9 +22,9 @@ const Diary = () => {
     );
 };
 
-const Container = styled.div`
+const StyledContainer = styled.div`
     position: relative;
-    height: calc(100vh - 140px);
+    //height: calc(100vh - 140px);
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0 10px;
@@ -33,16 +35,26 @@ const Container = styled.div`
     font-family: 'Gamja Flower', cursive;
 `;
 
+const Container = ({height, children}) => {
+    return (
+        <StyledContainer style={{height: height}}>
+            { children }
+        </StyledContainer>
+    );
+};
+
 const Date = styled.p`
     font-size: 1.2em;
     padding: 10px 5px;
 `;
 
-const Weather = styled.div`
-    position: absolute;
-    right: 5px;
-    top: 5px;
-`;
+const Weather = ({position="absolute", top="5px", leftAndRight={right: "5px"}, children}) => {
+    return (
+        <div style={{position: position, top: top, ...leftAndRight}}>
+            {children}
+        </div>
+    );
+};
 
 const Paragraph = styled.p`
     padding: 10px 5px;

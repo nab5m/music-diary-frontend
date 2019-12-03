@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { DefaultAppBar } from "../components/AppBar";
-import Diary from "../components/Diary";
+import Diary from "../components/home/Diary";
 
 const Home = ({match}) => {
     return (

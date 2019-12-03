@@ -21,7 +21,7 @@ const Gallery = () => {
     return (
         <Container>
             <GalleryIcon icon={faChevronLeft} onClick={() => { handleClick("left") }} />
-            <GalleryImage src={`/Gallery${curImageNo}.jpg`} width="230" height="150" alt="랜덤사진" />
+            <GalleryImage src={`/Gallery${curImageNo}.jpg`} width="230" height="auto" alt="랜덤사진" />
             <GalleryIcon icon={faChevronRight} onClick={() => { handleClick("right") }} />
         </Container>
     );

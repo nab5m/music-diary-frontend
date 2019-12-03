@@ -1,54 +1,97 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { DefaultAppBar } from "../components/AppBar";
+import {makeStyles, Switch} from "@material-ui/core";
+import withStyles from "@material-ui/core/styles/withStyles";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import MonthlyCalendar from "../components/calendar/MonthlyCalendar";
+import DailyCalendar from "../components/calendar/DailyCalendar";
+
+const useStyles = makeStyles({
+    switchWrapper: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+    },
+});
 
 const Calendar = ({match}) => {
+    const classes = useStyles();
+
+    const [state, setState] = React.useState({
+        checkedSwitch: true,
+    });
+
+    const handleChange = name => event => {
+        setState({ ...state, [name]: event.target.checked });
+    };
+
     return (
         <Container>
             <DefaultAppBar url={match.url} />
 
-            달력
+            <Typography component="div">
+                <Grid component="label" container className={classes.switchWrapper} alignItems="center" spacing={1}>
+                    <Grid item>일간</Grid>
+                    <Grid item>
+                        <AntSwitch
+                            checked={state.checkedSwitch}
+                            onChange={handleChange('checkedSwitch')}
+                            value="checkedSwitch"
+                        />
+                    </Grid>
+                    <Grid item>월간</Grid>
+                </Grid>
+            </Typography>
 
-            <FloatingActionButton>
-                <FloatingIcon icon={faPencilAlt} />
-            </FloatingActionButton>
-
-            <FloatingActionButton isActive>
-                <FloatingIcon icon={faPlus} />
-            </FloatingActionButton>
+            {state['checkedSwitch'] &&
+                <MonthlyCalendar />
+            }
+            {!state['checkedSwitch'] &&
+                <DailyCalendar />
+            }
         </Container>
     );
 };
 
 const Container = styled.div`
-
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Gamja Flower', cursive;  
 `;
 
-const FloatingIcon = styled(FontAwesomeIcon)`
-    position: absolute;
-    top: 14px;
-    left: 15px;
-    
-    font-size: 18px;
-`;
-
-const FloatingActionButton = styled.div`
-    position: absolute;
-    bottom: 0;
-    margin: 10px;
-
-    width: 45px;
-    height: 45px;
-    border-radius: 45px;
-    color: #f7fbfe;
-    background-color: #b51f5c;
-    
-    ${props => props.isActive && `
-        background-color: #214368;
-        right: 0;
-    `}
-`;
+const AntSwitch = withStyles(theme => ({
+    root: {
+        width: 36,
+        height: 20,
+        padding: 5,
+        display: 'flex',
+    },
+    switchBase: {
+        padding: 2,
+        color: "#214368",
+        '&$checked': {
+            transform: 'translateX(15px)',
+            color: "#214368",
+            '& + $track': {
+                opacity: 1,
+                backgroundColor: "#7f9cc7",
+            },
+        },
+    },
+    thumb: {
+        marginTop: 1,
+        width: 15,
+        height: 15,
+        boxShadow: 'none',
+    },
+    track: {
+        border: `1px solid ${theme.palette.grey[500]}`,
+        borderRadius: 16 / 2,
+        opacity: 1,
+        backgroundColor: theme.palette.common.white,
+    },
+    checked: {},
+}))(Switch);
 
 export default Calendar;
