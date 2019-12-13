@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 const DefaultAppBar = ({url}) => {
     return (
@@ -10,19 +11,19 @@ const DefaultAppBar = ({url}) => {
                     <AppTitleBlueberryPancake> 일기</AppTitleBlueberryPancake>
                 </AppTitle>
                 <Navigation>
-                    <IconButton href="/home">
+                    <IconButton to="/home">
                         <Icon src="/icons/HomeIcon2.svg" alt="홈_아이콘" color="pink" isActive={url === "/home"}/>
                     </IconButton>
-                    <IconButton href="/play-list-manager">
+                    <IconButton to="/play-list-manager">
                         <Icon src="/icons/PlayList4.svg" alt="목록_아이콘" color="blue" isActive={url === "/play-list-manager"}/>
                     </IconButton>
-                    <IconButton href="/calendar">
+                    <IconButton to="/calendar">
                         <Icon src="/icons/calendar_today.svg" alt="달력_아이콘" color="pink" isActive={url === "/calendar"}/>
                     </IconButton>
-                    <IconButton href="/friends">
+                    <IconButton to="/friends">
                         <Icon src="/icons/FriendsIcon.svg" alt="친구_아이콘" color="blue" isActive={url === "/friends"}/>
                     </IconButton>
-                    <IconButton href="/settings">
+                    <IconButton to="/settings">
                         <Icon src="/icons/settings.svg" alt="설정_아이콘" color="pink" isActive={url === "/settings"}/>
                     </IconButton>
                 </Navigation>
@@ -32,7 +33,7 @@ const DefaultAppBar = ({url}) => {
 };
 
 const Container = styled.div`
-    height: 80px;
+    height: 93px;
 `;
 const Wrapper = styled.div`
     position: fixed;
@@ -49,7 +50,7 @@ const Navigation = styled.div`
     border-bottom: 1px solid #c4c8cb;
 `;
 
-const IconButton = styled.a`
+const IconButton = styled(Link)`
     flex: 1;
     display: flex;
     align-items: center;
@@ -79,10 +80,10 @@ const Icon = ({src, color, isActive}) => {
 
 const AppTitle = styled.h1`
     padding-top: 8px;
-    padding-bottom: 12px;
+    padding-bottom: 18px;
     text-align: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
 `;
 const AppTitleBossyPink = styled.span`
     color: #b51f5c;

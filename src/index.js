@@ -4,11 +4,20 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
+import {CookiesProvider} from "react-cookie";
+import {Provider} from "mobx-react";
+import PlayListsStore from "./stores/playListsStore";
+
+const playLists = new PlayListsStore();
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <Provider playLists={playLists}>
+        <CookiesProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </CookiesProvider>
+    </Provider>,
     document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

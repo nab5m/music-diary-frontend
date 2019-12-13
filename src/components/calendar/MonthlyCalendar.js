@@ -23,11 +23,11 @@ const useStyles = makeStyles({
         fontSize: '1em',
     },
     editIcon: {
-        right: '28px',
+        right: '38px',
         color: '#214368',
     },
     deleteIcon: {
-        right: '5px',
+        right: '12px',
         color: '#b51f5c',
     },
     checkedDate: {

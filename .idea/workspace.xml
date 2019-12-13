@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/DailyCalendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/MonthlyCalendar.js" afterDir="false" />
+    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="PlayListManager and KakaoJsLogin&#10;&#10;: Designed PlayList">
+      <change afterPath="$PROJECT_DIR$/public/137579.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/184117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/2930532.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/2970028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/3051900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/3087858.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/3399860.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/406680.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/411459.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/41669.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/AddListDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/DeleteListDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/DeleteSongsDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/PlayList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/SongComponents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/playListsStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/useStores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppBar/DefaultAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/DefaultAppBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Diary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/MonthlyCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/MonthlyCalendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlayListManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayListManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Splash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,14 +65,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/calendar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
@@ -58,8 +80,8 @@
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\home" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\calendar" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\public" />
+      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\calendar" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\public\icons" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\pages" />
     </key>
@@ -105,7 +127,15 @@
       <workItem from="1575038900595" duration="3059000" />
       <workItem from="1575102049438" duration="705000" />
       <workItem from="1575103936976" duration="10899000" />
-      <workItem from="1575370464628" duration="9468000" />
+      <workItem from="1575370464628" duration="11228000" />
+      <workItem from="1575535409939" duration="8071000" />
+      <workItem from="1575548109001" duration="5357000" />
+      <workItem from="1575554440699" duration="492000" />
+      <workItem from="1575979060451" duration="7550000" />
+      <workItem from="1576058914255" duration="3334000" />
+      <workItem from="1576071133884" duration="6421000" />
+      <workItem from="1576146602079" duration="16073000" />
+      <workItem from="1576211572174" duration="10818000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -121,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575044404376</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Calendar Initial UI&#10;&#10;: Constructed Monthly/Daily Calendar UI">
+      <created>1575380175029</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575380175029</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +182,7 @@
     <MESSAGE value="DefaultAppBar" />
     <MESSAGE value="MainLayout&#10;&#10; draw icons and add picture :)" />
     <MESSAGE value="Gallery Button&#10;&#10;: handleClickIcon(&quot;left&quot; or &quot;right&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gallery Button&#10;&#10;: handleClickIcon(&quot;left&quot; or &quot;right&quot;)" />
+    <MESSAGE value="Calendar Initial UI&#10;&#10;: Constructed Monthly/Daily Calendar UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calendar Initial UI&#10;&#10;: Constructed Monthly/Daily Calendar UI" />
   </component>
 </project>

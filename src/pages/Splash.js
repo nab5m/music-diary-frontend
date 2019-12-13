@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function Splash ({history}) {
     useEffect(() => {
         const timer = setTimeout(() => {
-            history.push('/home');
+            history.push('/login');
         }, 2000);
         return () => clearTimeout(timer);
     }, [history]);

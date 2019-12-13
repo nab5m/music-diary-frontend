@@ -10,6 +10,8 @@ import DailyCalendar from "../components/calendar/DailyCalendar";
 
 const useStyles = makeStyles({
     switchWrapper: {
+        marginTop: 2,
+        marginLeft: -15,
         display: 'flex',
         justifyContent: 'flex-end',
     },
