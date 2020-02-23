@@ -4,19 +4,18 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
-import {CookiesProvider} from "react-cookie";
 import {Provider} from "mobx-react";
 import PlayListsStore from "./stores/playListsStore";
+import UserProfileStore from "./stores/UserProfileStore";
 
 const playLists = new PlayListsStore();
+const userProfile = new UserProfileStore();
 
 ReactDOM.render(
-    <Provider playLists={playLists}>
-        <CookiesProvider>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </CookiesProvider>
+    <Provider playLists={playLists} userProfile={userProfile} >
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root'));
 

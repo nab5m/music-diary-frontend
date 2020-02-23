@@ -1,13 +1,46 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
+import queryString from 'query-string';
+import axios from "axios";
+import {SERVER_URL_PREFIX} from "../secrets/Constants";
 
-function Splash ({history}) {
+axios.defaults.withCredentials = true;
+
+function onLoginSuccess (data, history) {
+    if(data.status === "Error") {
+        // 에러 처리(Access Code 못 얻음)
+    }
+    // redirect to home
+    const timer = setTimeout(() => {
+        history.push('/home');
+    }, 2000);
+    return () => clearTimeout(timer);
+}
+
+function Splash ({history, location}) {
+    const query = queryString.parse(location.search);
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            history.push('/login');
-        }, 2000);
-        return () => clearTimeout(timer);
-    }, [history]);
+        if(query.code) {
+            const Url = SERVER_URL_PREFIX + 'oauth/';
+            const code = query.code;
+            axios.get(Url, {params: {code: code}})
+                .then((response) => {
+                    const data = response.data;
+                    return onLoginSuccess(data, history);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+        else {
+            // redirect to login
+            const timer = setTimeout(() => {
+                history.push('/login');
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [history, query]);
 
     return (
         <SplashContainer>

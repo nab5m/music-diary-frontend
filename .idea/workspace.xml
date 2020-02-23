@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
+    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/UserProfileStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playLists/PlayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/PlayList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlayListManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayListManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Splash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +44,11 @@
   </component>
   <component name="ProjectId" id="1U9IdgZffCLDuUvNzCrYcnmeeV6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
@@ -41,7 +57,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
@@ -56,15 +74,24 @@
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\pages" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -108,7 +135,25 @@
       <workItem from="1576211572174" duration="11608000" />
       <workItem from="1576295557413" duration="115000" />
       <workItem from="1576420027806" duration="458000" />
-      <workItem from="1576493739725" duration="1738000" />
+      <workItem from="1576493739725" duration="1925000" />
+      <workItem from="1576750697310" duration="7000" />
+      <workItem from="1576750818409" duration="15104000" />
+      <workItem from="1577603875329" duration="12000" />
+      <workItem from="1579021729652" duration="8000" />
+      <workItem from="1581951122000" duration="2124000" />
+      <workItem from="1581954750349" duration="690000" />
+      <workItem from="1581955531738" duration="825000" />
+      <workItem from="1581967249661" duration="805000" />
+      <workItem from="1581968471200" duration="204000" />
+      <workItem from="1581968801373" duration="22000" />
+      <workItem from="1582006545466" duration="599000" />
+      <workItem from="1582025799408" duration="11000" />
+      <workItem from="1582036111569" duration="662000" />
+      <workItem from="1582043555948" duration="2575000" />
+      <workItem from="1582046670887" duration="703000" />
+      <workItem from="1582047891708" duration="770000" />
+      <workItem from="1582377331622" duration="618000" />
+      <workItem from="1582471658427" duration="886000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -138,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576253142823</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add introduction to README">
+      <created>1576495537815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495537816</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +216,38 @@
     <MESSAGE value="Gallery Button&#10;&#10;: handleClickIcon(&quot;left&quot; or &quot;right&quot;)" />
     <MESSAGE value="Calendar Initial UI&#10;&#10;: Constructed Monthly/Daily Calendar UI" />
     <MESSAGE value="PlayListManager and KakaoJsLogin&#10;&#10;: Designed PlayListManager&#10;- using mobx&#10;- create and delete lists&#10;- delete songs&#10;- add to(remove from) todaysList&#10;&#10;Used KakaoJsLogin&#10;- to be updated =&gt; rest api" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlayListManager and KakaoJsLogin&#10;&#10;: Designed PlayListManager&#10;- using mobx&#10;- create and delete lists&#10;- delete songs&#10;- add to(remove from) todaysList&#10;&#10;Used KakaoJsLogin&#10;- to be updated =&gt; rest api" />
+    <MESSAGE value="add introduction to README" />
+    <MESSAGE value="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581953025396">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581953025396" />
+    <state x="579" y="109" key="CommitChangelistDialog2" timestamp="1582472433109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="579" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582472433109" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582046836484">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582046836484" />
+    <state width="1899" height="195" key="GridCell.Tab.0.bottom" timestamp="1582472295309">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295309" />
+    <state width="1899" height="195" key="GridCell.Tab.0.center" timestamp="1582472295308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295308" />
+    <state width="1899" height="195" key="GridCell.Tab.0.left" timestamp="1582472295308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295308" />
+    <state width="1899" height="195" key="GridCell.Tab.0.right" timestamp="1582472295308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295308" />
   </component>
 </project>

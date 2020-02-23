@@ -5,7 +5,6 @@ import {faTrashAlt} from "@fortawesome/free-regular-svg-icons";
 import classNames from "classnames";
 import styled from "styled-components";
 import {makeStyles} from "@material-ui/core";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {observer} from "mobx-react";
 import {FloatingIcon, Song, SongArtist, SongProfileImage, SongTitle} from "./SongComponents";
 

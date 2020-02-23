@@ -1,28 +1,26 @@
-import React from 'react';
-import KakaoLogin from 'react-kakao-login';
-import { JS_APP_KEY } from '../secrets/KakaoKey';
-import { withCookies } from 'react-cookie';
+import React, {useEffect} from 'react';
+import {SERVER_URL_PREFIX} from "../secrets/Constants";
+import axios from "axios";
 
-const Login = ({history, cookies}) => {
-    const GoBack = () => {
-        history.push('/');
-    };
-
-    const onSuccess = (result) => {
-        cookies.set('user', result);
-        history.push('/home');
-    };
+const Login = () => {
+    useEffect(() => {
+         const Url = SERVER_URL_PREFIX + 'request-login-url';
+         axios.get(Url)
+             .then((response) => {
+                 const data = response.data;
+                 window.location = data['login_request_uri'];
+             })
+             .catch((error) => {
+                 alert('error');
+                 console.log(error);
+             });
+    });
 
     return (
         <div>
-            <KakaoLogin
-                jsKey={JS_APP_KEY}
-                onSuccess={result => onSuccess(result)}
-                onFailure={() => GoBack()}
-                getProfile={true}
-            />
+            <h1>로딩중...</h1>
         </div>
     );
 };
 
-export default withCookies(Login);
+export default Login;

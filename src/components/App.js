@@ -8,6 +8,7 @@ import Calendar from "../pages/Calendar";
 import Friends from "../pages/Friends";
 import Settings from "../pages/Settings";
 import Login from "../pages/Login";
+import Logout from "../pages/Logout";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/friends" component={Friends} />
           <Route exact path="/settings" component={Settings} />
+          <Route exact path="/logout" component={Logout} />
       </div>
   );
 }

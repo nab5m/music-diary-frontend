@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { DefaultAppBar } from "../components/AppBar";
 import Button from "@material-ui/core/Button";
-import {withCookies} from "react-cookie";
 import {makeStyles} from "@material-ui/core";
+import {observer} from "mobx-react";
+import useStores from "../stores/useStores";
 
 const useStyles = makeStyles({
     profile: {
@@ -33,28 +34,29 @@ const useStyles = makeStyles({
     },
 });
 
-const Settings = ({match, cookies}) => {
+const Settings = observer(({match, history}) => {
     const classes = useStyles();
 
-    const User = cookies.get('user');
-    const Nickname = User.profile.properties.nickname;
-    const Email = User.profile.kakao_account.email;
-    const AgeRange = User.profile.kakao_account.age_range;
-    const ProfileImageURL= User.profile.properties.profile_image;
+    const { userProfile } = useStores();
+
+    if(!userProfile.isReady) {
+        userProfile.loadData();
+    }
 
     const Logout = () => {
-        console.log('로그아웃');
+        history.push('/logout');
     };
 
     return (
         <Container>
             <DefaultAppBar url={match.url} />
             <div className={classes.profile}>
-                <img className={classes.profileImage} src={ProfileImageURL} alt="프로필사진" />
+                <img className={classes.profileImage} src={userProfile.data.thumbnail_image} alt="프로필사진" />
                 <div className={classes.profileDataWrapper}>
-                    <div className={classes.nickname}>닉네임 : {Nickname}</div>
-                    <div className={classes.email}>이메일 : {Email}</div>
-                    <div className={classes.ageRange}>연령대 : {AgeRange}</div>
+                    <div className={classes.nickname}>닉네임 : {userProfile.data.nickname}</div>
+                    <div className={classes.email}>이메일 : {userProfile.data.email}</div>
+                    {/* ToDo: 조건부 렌더링!! if null */}
+                    <div className={classes.ageRange}>연령대 : {userProfile.data.age_range}</div>
                 </div>
             </div>
             <Button className={classes.logoutButton} onClick={Logout} variant="outlined">로그아웃</Button>
@@ -68,7 +70,7 @@ const Settings = ({match, cookies}) => {
             </FloatingActionButton>
         </Container>
     );
-};
+});
 
 const Container = styled.div`
 
@@ -99,4 +101,4 @@ const FloatingActionButton = styled.div`
     `}
 `;
 
-export default withCookies(Settings);
+export default Settings;

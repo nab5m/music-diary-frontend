@@ -15,6 +15,10 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'flex-end',
     },
+    calendarWrapper: {
+        height: 'calc(100vh - 125px)',
+        overflowY: 'scroll',
+    },
 });
 
 const Calendar = ({match}) => {
@@ -46,19 +50,23 @@ const Calendar = ({match}) => {
                 </Grid>
             </Typography>
 
-            {state['checkedSwitch'] &&
-                <MonthlyCalendar />
-            }
-            {!state['checkedSwitch'] &&
-                <DailyCalendar />
-            }
+            <div className={classes.calendarWrapper}>
+                {state['checkedSwitch'] &&
+                    <MonthlyCalendar />
+                }
+                {!state['checkedSwitch'] &&
+                    <DailyCalendar />
+                }
+            </div>
         </Container>
     );
 };
 
 const Container = styled.div`
     width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Gamja Flower', cursive;  
 `;
 
