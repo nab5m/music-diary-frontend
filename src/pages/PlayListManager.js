@@ -13,27 +13,19 @@ import TodaysList from "../components/playLists/TodaysList";
 import {FloatingIcon} from "../components/playLists/SongComponents";
 
 const PlayListManager = observer(({match}) => {
-    //const [addListDialogOpen, setAddListDialogOpen] = useState(false);
-    //const [deleteListDialog, setDeleteListDialog] = useState({id: -1, title: '', open: false});
-
     const {playLists} = useStores();
-
-    // const handleClickCheckButton = (listId, songId) => {
-    //
-    //     // setPlayLists({
-    //     //     ...playLists,
-    //     //     checkedCount: playLists.checkedCount
-    //     //     lists:
-    //     // });
-    // };
+    if(playLists.loadState === "before") {
+        playLists.loadDataFromServer();
+    }
 
     const PlayLists = playLists.lists.map(
         list => (
             <PlayList
-                key={list.listId}
-                id={list.listId}
-                title={list.listTitle}
+                key={list.id}
+                id={list.id}
+                title={list.title}
                 songs={list.songs}
+                loadState={playLists.loadState}
                 checkedSongs={playLists.checkedSongs}
                 openDeleteListDialog={playLists.openDeleteListDialog}
                 toggleCheckButton={playLists.toggleCheckButton}

@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stores/UserProfileStore.js" afterDir="false" />
+    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playLists/DeleteSongsDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/DeleteSongsDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/playLists/PlayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/PlayList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PlayListManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayListManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Splash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/playListsStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/playListsStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +145,10 @@
       <workItem from="1582046670887" duration="703000" />
       <workItem from="1582047891708" duration="770000" />
       <workItem from="1582377331622" duration="618000" />
-      <workItem from="1582471658427" duration="886000" />
+      <workItem from="1582471658427" duration="1810000" />
+      <workItem from="1582474994843" duration="207000" />
+      <workItem from="1582475366150" duration="1508000" />
+      <workItem from="1582547859512" duration="12062000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -190,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576495537816</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server">
+      <created>1582472565832</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582472565832</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,29 +227,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581953025396" />
-    <state x="579" y="109" key="CommitChangelistDialog2" timestamp="1582472433109">
+    <state x="579" y="107" key="CommitChangelistDialog2" timestamp="1582472564625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="579" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582472433109" />
+    <state x="579" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582472564625" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582046836484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582046836484" />
-    <state width="1899" height="195" key="GridCell.Tab.0.bottom" timestamp="1582472295309">
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582563271562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295309" />
-    <state width="1899" height="195" key="GridCell.Tab.0.center" timestamp="1582472295308">
+    <state width="1259" height="195" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582518461255" />
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271562" />
+    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582563271562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295308" />
-    <state width="1899" height="195" key="GridCell.Tab.0.left" timestamp="1582472295308">
+    <state width="1259" height="195" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
+    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271562" />
+    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582563271561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295308" />
-    <state width="1899" height="195" key="GridCell.Tab.0.right" timestamp="1582472295308">
+    <state width="1259" height="195" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
+    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271561" />
+    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582563271562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582472295308" />
+    <state width="1259" height="195" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
+    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271562" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582472579826">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582472579826" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582566910484">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582566910484" />
   </component>
 </project>

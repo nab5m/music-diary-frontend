@@ -47,9 +47,9 @@ const TodaysList = observer(() => {
         return (
             <Song key={song.songId}>
                 {/* key 중복 가능성 */}
-                <SongProfileImage src={`/${song.songId}.jpg`} alt="hello" />
-                <SongTitle>{song.songTitle}</SongTitle>
-                <SongArtist>{song.songArtist}</SongArtist>
+                <SongProfileImage src={song.thumbnail_image_url} alt="hello" />
+                <SongTitle>{song.title}</SongTitle>
+                <SongArtist>{song.artist}</SongArtist>
 
                 <FloatingIcon
                     icon={faMinus}

@@ -52,27 +52,47 @@ const useStyles = makeStyles({
     },
 });
 
-const PlayList = observer(({id, title, songs, checkedSongs,
+const PlayList = observer(({id, title, songs, loadState, checkedSongs,
                                openDeleteListDialog, toggleCheckButton, addToTodaysList}) => {
     const classes = useStyles();
 
+    /* ToDo: code review */
+    if(loadState === "pending") {
+        console.log("pending");
+        return (<div> </div>);
+    }
+
+    /* ToDo: code review => should component update */
+    for(let i=0; i<songs.length; i++) {
+        if(!songs[i].id) {
+            console.log("pending");
+            return (<div> </div>);
+        }
+    }
+
     const Songs = songs.map(
-        song => (
-            <Song key={song.songId}>
-                <SongProfileImage src={`/${song.songId}.jpg`} alt="hello" />
-                <SongTitle>{song.songTitle}</SongTitle>
-                <SongArtist>{song.songArtist}</SongArtist>
+        song => {
+            return (
+            <Song key={song.id}>
+                <SongProfileImage src={song.thumbnail_image_url} alt="hello"/>
+                <SongTitle>{song.title}</SongTitle>
+                <SongArtist>{song.artist}</SongArtist>
 
                 <FloatingIcon
                     icon={faCheck}
-                    onClick={() => {toggleCheckButton(id, song.songId)}}
-                    className={classNames(classes.checkSongIcon, song.checked ? classes.checkedSongIcon : '')} />
+                    onClick={() => {
+                        toggleCheckButton(id, song.id)
+                    }}
+                    className={classNames(classes.checkSongIcon, song.checked ? classes.checkedSongIcon : '')}/>
                 <FloatingIcon
                     icon={faPlus}
-                    onClick={() => {addToTodaysList(id, song.songId)}}
-                    className={classes.addTodaySongIcon} />
+                    onClick={() => {
+                        addToTodaysList(id, song.id)
+                    }}
+                    className={classes.addTodaySongIcon}/>
             </Song>
-        )
+            );
+        }
     );
 
     return (

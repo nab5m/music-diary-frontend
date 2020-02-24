@@ -52,7 +52,12 @@ const DeleteSongsDialog = ({open, onClose, title, checkedCount}) => {
 
     return (
         <Dialog open={open} onClose={cancel} classes={{paper: classes.container}}>
-            <h3 className={classes.title}>{title} <span className={classes.extra}> + {checkedCount-1}곡</span></h3>
+            { checkedCount === 0 &&
+                <h3 className={classes.title}>선택된 곡이 없습니다!!</h3>
+            }
+            { checkedCount >= 1 &&
+                <h3 className={classes.title}>{title} <span className={classes.extra}> + {checkedCount - 1}곡</span></h3>
+            }
             <p className={classes.guideMessage}>정말 이 노래 모두 삭제할거야?</p>
             <div className={classes.buttonGroup}>
                 <Button
