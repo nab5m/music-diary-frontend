@@ -115,21 +115,21 @@ class PlayListsStore {
         this.deleteListDialog.open = true;
     };
     closeDeleteListDialog = async (id) => {
-        if(id === -1) { return; }
+        if(id !== -1) { // clicked ok button
+            const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + id + '/';
 
-        const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + id + '/';
+            await axios.delete(url)
+                .then((response) => {
+                    console.log(response.data);
+                })
+                .catch((error) => {
+                    console.log(error.response);
+                });
 
-        await axios.delete(url)
-            .then((response) => {
-                console.log(response.data);
-            })
-            .catch((error) => {
-                console.log(error.response);
+            this.lists = this.lists.filter((elem) => {
+                return elem.id !== id;
             });
-
-        this.lists = this.lists.filter((elem) => {
-             return elem.id !== id;
-        });
+        }
         this.deleteListDialog.id = -1;
         this.deleteListDialog.title = '';
         this.deleteListDialog.open = false;

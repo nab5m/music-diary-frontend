@@ -3,10 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playLists/DeleteSongsDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/DeleteSongsDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playLists/PlayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/PlayList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PlayListManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayListManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/137579.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/184117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/2930532.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/2970028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3051900.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3087858.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3399860.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/406680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/411459.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/41669.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/playListsStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/playListsStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +156,11 @@
       <workItem from="1582471658427" duration="1810000" />
       <workItem from="1582474994843" duration="207000" />
       <workItem from="1582475366150" duration="1508000" />
-      <workItem from="1582547859512" duration="12062000" />
+      <workItem from="1582547859512" duration="12397000" />
+      <workItem from="1582624041536" duration="141000" />
+      <workItem from="1582633888514" duration="144000" />
+      <workItem from="1582634833336" duration="251000" />
+      <workItem from="1582635691542" duration="2746000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -192,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582472565832</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="PlayList Init, Create, Delete&#10;&#10;- function: load initial data from server&#10;=&gt; should protect from the component re-rendering&#10;- function: create a new list&#10;- function: delete a new list">
+      <created>1582575261174</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582575261176</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,45 +239,46 @@
     <MESSAGE value="PlayListManager and KakaoJsLogin&#10;&#10;: Designed PlayListManager&#10;- using mobx&#10;- create and delete lists&#10;- delete songs&#10;- add to(remove from) todaysList&#10;&#10;Used KakaoJsLogin&#10;- to be updated =&gt; rest api" />
     <MESSAGE value="add introduction to README" />
     <MESSAGE value="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server" />
+    <MESSAGE value="PlayList Init, Create, Delete&#10;&#10;- function: load initial data from server&#10;=&gt; should protect from the component re-rendering&#10;- function: create a new list&#10;- function: delete a new list" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlayList Init, Create, Delete&#10;&#10;- function: load initial data from server&#10;=&gt; should protect from the component re-rendering&#10;- function: create a new list&#10;- function: delete a new list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581953025396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581953025396" />
-    <state x="579" y="107" key="CommitChangelistDialog2" timestamp="1582472564625">
+    <state x="579" y="107" key="CommitChangelistDialog2" timestamp="1582575259163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="579" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582472564625" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582046836484">
+    <state x="579" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582575259163" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582819925294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582046836484" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582563271562">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582819925294" />
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582716627336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582518461255" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271562" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582563271562">
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
+    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582716627336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271562" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582563271561">
+    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
+    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582716627336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271561" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582563271562">
+    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
+    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582716627336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582563271562" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582472579826">
+    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582575297044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582472579826" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582575297044" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582566910484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
