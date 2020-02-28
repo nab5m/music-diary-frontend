@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/AddSongDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playLists/Song.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/137579.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/184117.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2930532.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2970028.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/3051900.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/3087858.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/3399860.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/406680.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/411459.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/41669.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playLists/PlayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/PlayList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playLists/SongComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/StyledSongComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlayListManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayListManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/playListsStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/playListsStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/playLists" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -64,14 +60,15 @@
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\home" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\playLists" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\public" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\calendar" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\public\icons" />
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\home" />
     </key>
   </component>
   <component name="RunManager">
@@ -161,6 +158,8 @@
       <workItem from="1582633888514" duration="144000" />
       <workItem from="1582634833336" duration="251000" />
       <workItem from="1582635691542" duration="2746000" />
+      <workItem from="1582819767390" duration="16140000" />
+      <workItem from="1582887772264" duration="12266000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582575261176</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add some resources and fix Error&#10;&#10;- add favicon, meta_og_image&#10;- fix: In CloseAddListDialog, no input then do not anything">
+      <created>1582820083796</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582820083796</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,45 +246,50 @@
     <MESSAGE value="add introduction to README" />
     <MESSAGE value="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server" />
     <MESSAGE value="PlayList Init, Create, Delete&#10;&#10;- function: load initial data from server&#10;=&gt; should protect from the component re-rendering&#10;- function: create a new list&#10;- function: delete a new list" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlayList Init, Create, Delete&#10;&#10;- function: load initial data from server&#10;=&gt; should protect from the component re-rendering&#10;- function: create a new list&#10;- function: delete a new list" />
+    <MESSAGE value="Add some resources and fix Error&#10;&#10;- add favicon, meta_og_image&#10;- fix: In CloseAddListDialog, no input then do not anything" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some resources and fix Error&#10;&#10;- add favicon, meta_og_image&#10;- fix: In CloseAddListDialog, no input then do not anything" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581953025396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581953025396" />
-    <state x="579" y="107" key="CommitChangelistDialog2" timestamp="1582575259163">
+    <state x="833" y="45" key="CommitChangelistDialog2" timestamp="1582820082453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="579" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582575259163" />
+    <state x="833" y="45" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582820082453" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582819925294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582819925294" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582716627336">
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582894374765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582518461255" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582716627336">
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374765" />
+    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582894374764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582716627336">
+    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374764" />
+    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582894374761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582716627336">
+    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374761" />
+    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582894374764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582716627336" />
+    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374764" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582575297044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582575297044" />
+    <state x="508" y="118" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582830400681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="508" y="118" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582830400681" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582566910484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

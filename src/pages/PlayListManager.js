@@ -10,7 +10,8 @@ import {observer} from "mobx-react";
 import useStores from "../stores/useStores";
 import DeleteSongsDialog from "../components/playLists/DeleteSongsDialog";
 import TodaysList from "../components/playLists/TodaysList";
-import {FloatingIcon} from "../components/playLists/SongComponents";
+import {FloatingIcon} from "../components/playLists/StyledSongComponents";
+import AddSongDialog from "../components/playLists/AddSongDialog";
 
 const PlayListManager = observer(({match}) => {
     const {playLists} = useStores();
@@ -27,6 +28,7 @@ const PlayListManager = observer(({match}) => {
                 songs={list.songs}
                 loadState={playLists.loadState}
                 checkedSongs={playLists.checkedSongs}
+                openAddSongDialog={playLists.openAddSongDialog}
                 openDeleteListDialog={playLists.openDeleteListDialog}
                 toggleCheckButton={playLists.toggleCheckButton}
                 addToTodaysList={playLists.addToTodaysList}
@@ -43,7 +45,14 @@ const PlayListManager = observer(({match}) => {
                 {PlayLists}
             </ListContainer>
 
+            <AddSongDialog listId={playLists.addSongDialog.listId} title={playLists.addSongDialog.listTitle}
+                           open={playLists.addSongDialog.open} onClose={playLists.closeAddSongDialog}
+                            sendSearchQuery={playLists.sendSearchQuery} searchResult={playLists.searchResult}
+                            listHasSong={playLists.listHasSong} addSongToMyList={playLists.addSongToMyList}
+                            removeSongFromMyList={playLists.removeSongFromMyList}/>
+
             <AddListDialog open={playLists.addListDialogOpen} onClose={playLists.closeAddListDialog} />
+
             <DeleteListDialog id={playLists.deleteListDialog.id} title={playLists.deleteListDialog.title}
                               open={playLists.deleteListDialog.open} onClose={playLists.closeDeleteListDialog}/>
 

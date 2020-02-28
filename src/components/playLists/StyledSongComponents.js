@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const Song = styled.div`
+const StyledSong = styled.div`
     position: relative;
     padding: 10px;
 `;
@@ -15,15 +15,25 @@ const SongProfileImage = styled.img`
 `;
 
 const SongTitle = styled.div`
+    box-sizing: border-box;
     height: 20px;
+    width: calc(100% - 50px);
+    
     display: flex;
     align-items: flex-end;
+    white-space: nowrap;
+    overflow: hidden;
 `;
 
 const SongArtist = styled.div`
+    box-sizing: border-box;
     height: 20px;
+    width: calc(100% - 50px);
+    
     font-size: 0.9em;
     display: flex;
+    white-space: nowrap;
+    overflow: hidden;
     color: #b5b8bb;
 `;
 
@@ -35,7 +45,7 @@ const FloatingIcon = styled(FontAwesomeIcon)`
     font-size: 18px;
 `;
 
-export {Song};
+export {StyledSong};
 export {SongProfileImage};
 export {SongTitle};
 export {SongArtist};

@@ -1,10 +1,9 @@
 import React from 'react';
 import Box from "@material-ui/core/Box";
 import {makeStyles} from "@material-ui/core";
-import {FloatingIcon, Song, SongArtist, SongProfileImage, SongTitle} from "./SongComponents";
-import {faMinus} from "@fortawesome/free-solid-svg-icons";
 import {observer} from "mobx-react";
 import useStores from "../../stores/useStores";
+import {TodaySong} from "./Song";
 
 const useStyles = makeStyles({
     container: {
@@ -28,14 +27,6 @@ const useStyles = makeStyles({
         padding: '0 10px',
         paddingBottom: 5,
     },
-    removeIcon: {
-        padding: 5,
-        fontSize: '0.9em',
-        color: '#b51f5c',
-        top: 15,
-        left: 'auto',
-        right: 5,
-    },
 });
 
 const TodaysList = observer(() => {
@@ -43,19 +34,13 @@ const TodaysList = observer(() => {
     const {playLists} = useStores();
     const list = playLists.todaysList;
 
+    /* listId, songId, thumbnail_image_url, title, artist, removeFromTodaysList */
+    /* key 중복 가능성? */
     const Songs = list.map((song) => {
         return (
-            <Song key={song.songId}>
-                {/* key 중복 가능성 */}
-                <SongProfileImage src={song.thumbnail_image_url} alt="hello" />
-                <SongTitle>{song.title}</SongTitle>
-                <SongArtist>{song.artist}</SongArtist>
-
-                <FloatingIcon
-                    icon={faMinus}
-                    onClick={() => {playLists.removeFromTodaysList(song.listId, song.songId)}}
-                    className={classes.removeIcon} />
-            </Song>
+            <TodaySong key={song.songId} listId={song.listId} songId={song.songId}
+                thumbnail_image_url={song.thumbnail_image_url} title={song.title} artist={song.artist}
+                removeFromTodaysList={playLists.removeFromTodaysList} />
         );
     });
 

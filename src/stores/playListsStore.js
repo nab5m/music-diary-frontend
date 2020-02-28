@@ -5,6 +5,7 @@ import axios from "axios";
 class PlayListsStore {
     lists = [];
     todaysList = [];
+    searchResult = {input: '', offset: 0, count: 0, songs: []};
     // lists = [
     //     {
     //         listId: 0,
@@ -42,9 +43,11 @@ class PlayListsStore {
     // before, pending, success, error
 
     /* dialogs @observable */
+    addSongDialog = {listTd: -1, listTitle: '', open: false};
     addListDialogOpen = false;
     deleteListDialog = {id: -1, title: '', open: false};
     deleteSongsDialog = {title: '', checkedCount: 0, open: false};
+
     async loadDataFromServer() {
         /*
         ToDo: call Only one time
@@ -67,6 +70,8 @@ class PlayListsStore {
 
                 for (let i=0; i < this.lists.length; i++) {
                     const songs = this.lists[i].songs;
+
+                    /* 해당 list를 찾는 낭비 때문에 updateSongInfoInList()로 대체하지 않음 */
                     for(let j=0; j < songs.length; j++) {
                         axios.get(url + songs[j], {data: requestData})
                             .then((response) => {
@@ -86,7 +91,167 @@ class PlayListsStore {
             });
     }
 
+    listHasSong = (listId, songId) => {
+        console.log(listId + ' ' + songId);
+
+        const songs = this.getSongsFromList(listId);
+        for(let i=0; i < songs.length; i++) {
+            if(songId === songs[i]) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+
     /* dialogs @action */
+    openAddSongDialog = (id, title) => {
+        this.addSongDialog.listId = id;
+        this.addSongDialog.listTitle = title;
+        this.addSongDialog.open = true;
+    };
+    sendSearchQuery = async (input, offset=0, limit=10) => {
+        const url = SERVER_URL_PREFIX + `api/v1/song/?search=${encodeURI(input)}&offset=${offset}&limit=${limit}`;
+
+        await axios.get(url)
+            .then((response) => {
+                // ToDo: 굳이 오프셋을 매번 문자열에서 읽어와? count도 매번 갱신해?
+                if(response.data['next']) {
+                    console.log('has next');
+
+                    const offsetStartIdx = response.data.next.indexOf("offset=");
+                    const offsetEndIdx = response.data.next.indexOf("&", offsetStartIdx);
+                    const offsetVariable = response.data.next.slice(offsetStartIdx + "offset=".length, offsetEndIdx);
+
+                    // calc current page offset
+                    this.searchResult.offset = parseInt(offsetVariable) - 10;
+                }
+                else if(response.data['previous']) {
+                    console.log('has previous');
+
+                    const offsetStartIdx = response.data.previous.indexOf("offset=");
+                    const offsetEndIdx = response.data.previous.indexOf("&", offsetStartIdx);
+                    const offsetVariable = response.data.previous.slice(offsetStartIdx + "offset=".length, offsetEndIdx);
+
+                    this.searchResult.offset = parseInt(offsetVariable) + 10;
+                }
+                else {
+                    console.log('no prev or next');
+                    this.searchResult.offset = 0;
+                }
+
+                this.searchResult.input = input;
+                this.searchResult.count = response.data.count;
+                this.searchResult.songs = response.data.results;
+            })
+            .catch((error) => {
+                console.log(error.response);
+            });
+    };
+    closeAddSongDialog = () => {
+        /* delete used data */
+        this.addSongDialog.listId = -1;
+        this.addSongDialog.listTitle = '';
+        this.addSongDialog.open = false;
+
+        this.searchResult.input = '';
+        this.searchResult.offset = 0;
+        this.searchResult.count = 0;
+        this.searchResult.songs = [];
+    };
+
+    getSongsFromList = (listId) => {
+        let songs = [];
+
+        for(let i=0; i < this.lists.length; i++) {
+            if(listId === this.lists[i].id) {
+                for(let j=0; j < this.lists[i].songs.length; j++) {
+                    songs.push(this.lists[i].songs[j].id);
+                }
+            }
+        }
+
+        for(let i=0; i < this.todaysList.length; i++) {
+            if(listId === this.todaysList[i].listId) {
+                songs.push(this.todaysList[i].songId);
+            }
+        }
+
+        return songs;
+    };
+
+    updateSongInfoInList = async (listId, songId) => {
+        const url = SERVER_URL_PREFIX + 'api/v1/song/' + songId;
+
+        await axios.get(url)
+            .then((response) => {
+                for(let i=0; i < this.lists.length; i++) {
+                    if(listId === this.lists[i].id) {
+                        this.lists[i].songs.push({ ...response.data, checked: false });
+                    }
+                }
+            })
+            .catch((error) => {
+                console.log(error.response);
+            });
+    };
+    addSongToMyList = async (listId, songId) => {
+        const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + listId + '/';
+        const requestData = { songs: this.getSongsFromList(listId).concat([songId]) };
+
+        await axios.patch(url, requestData)
+            .then((response) => {
+                console.log(response.data);
+                this.updateSongInfoInList(listId, songId);
+            })
+            .catch((error) => {
+                console.log(error.response);
+            });
+    };
+
+    removeSongInfoInList = (listId, songId) => {
+        /* if song is in today's list */
+
+        for(let i=0; i < this.lists.length; i++) {
+            if(listId === this.lists[i].id) {
+                for(let j=0; j < this.lists[i].songs.length; j++) {
+                    if(songId === this.lists[i].songs[j].id) {
+                        this.lists[i].songs.splice(j, 1);
+                        return;
+                    }
+                }
+            }
+        }
+
+        /*
+            리스트 안에서도 지웠는데 오늘 목록에서 삭제하는가?
+            오늘 목록에서 삭제하면 DB에서도 삭제하는가???
+        */
+        for(let i=0; i < this.todaysList.length; i++) {
+            if(listId === this.todaysList[i].listId && songId === this.todaysList[i].songId) {
+                this.todaysList.splice(i, 1);
+                return;
+            }
+        }
+    };
+    removeSongFromMyList = async (listId, songId) => {
+        const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + listId + '/';
+        const requestData = {
+            songs: this.getSongsFromList(listId).filter((item) => {
+                return item !== songId;
+            }),
+        };
+
+        await axios.patch(url, requestData)
+            .then((response) => {
+                console.log(response.data);
+                this.removeSongInfoInList(listId, songId);
+            })
+            .catch((error) => {
+                console.log(error.response);
+            });
+    };
+
     openAddListDialog = () => {
         this.addListDialogOpen = true;
     };
@@ -152,14 +317,14 @@ class PlayListsStore {
     };
     closeDeleteSongsDialog = (confirm) => {
         if(confirm) {
-            let copiedLists = this.lists.slice(0);
-            for(let i=0; i<copiedLists.length; i++) {
-                copiedLists[i].songs = copiedLists[i].songs.filter((elem) => {
+            for(let i=0; i<this.lists.length; i++) {
+                this.lists[i].songs = this.lists[i].songs.filter((elem) => {
+                    if(elem.checked) {
+                        this.removeSongFromMyList(this.lists[i].id, elem.id);
+                    }
                     return !elem.checked;
                 });
             }
-
-            this.lists = copiedLists;
         }
 
         // this.deleteSongsDialog.title = '';
@@ -229,13 +394,24 @@ class PlayListsStore {
 decorate(PlayListsStore, {
     lists: observable,
     todaysList: observable,
+    searchResult: observable,
     loadState: observable,
 
+    addSongDialog: observable,
     addListDialogOpen: observable,
     deleteListDialog: observable,
     deleteSongsDialog: observable,
 
     loadDataFromServer: action,
+
+    openAddSongDialog: action,
+    sendSearchQuery: action,
+    closeAddSongDialog: action,
+
+    updateSongInfoInList: action,
+    addSongToMyList: action,
+    removeSongInfoInList: action,
+    removeSongFromMyList: action,
 
     openAddListDialog: action,
     closeAddListDialog: action,

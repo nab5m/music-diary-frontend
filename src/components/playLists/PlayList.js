@@ -1,39 +1,20 @@
 import React from 'react';
 import Box from "@material-ui/core/Box";
-import {faCheck, faPlus} from "@fortawesome/free-solid-svg-icons";
+import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {faTrashAlt} from "@fortawesome/free-regular-svg-icons";
-import classNames from "classnames";
 import styled from "styled-components";
 import {makeStyles} from "@material-ui/core";
 import {observer} from "mobx-react";
-import {FloatingIcon, Song, SongArtist, SongProfileImage, SongTitle} from "./SongComponents";
+import {FloatingIcon} from "./StyledSongComponents";
+import { Song } from "./Song";
 
 const useStyles = makeStyles({
-    checkSongIcon: {
-        padding: 5,
-        fontSize: '0.9em',
-        color: '#b5b8bb',
-        top: 18,
-        left: 'auto',
-        right: 28,
-    },
-    checkedSongIcon: {
-        color: '#b51f5c !important',
-    },
     addSongIcon: {
         fontSize: '0.9em',
         color: '#214368',
         top: 8,
         left: 'auto',
         right: 28,
-    },
-    addTodaySongIcon: {
-        padding: 5,
-        fontSize: '0.9em',
-        color: '#214368',
-        top: 18,
-        left: 'auto',
-        right: 0,
     },
     deleteListIcon: {
         fontSize: '0.9em',
@@ -53,7 +34,7 @@ const useStyles = makeStyles({
 });
 
 const PlayList = observer(({id, title, songs, loadState, checkedSongs,
-                               openDeleteListDialog, toggleCheckButton, addToTodaysList}) => {
+                               openAddSongDialog, openDeleteListDialog, toggleCheckButton, addToTodaysList}) => {
     const classes = useStyles();
 
     /* ToDo: code review */
@@ -69,28 +50,15 @@ const PlayList = observer(({id, title, songs, loadState, checkedSongs,
             return (<div> </div>);
         }
     }
-
+    /* listId, songId, thumbnail_image_url, title, artist,
+                  toggleCheckButton, checked, addToTodaysList */
     const Songs = songs.map(
         song => {
             return (
-            <Song key={song.id}>
-                <SongProfileImage src={song.thumbnail_image_url} alt="hello"/>
-                <SongTitle>{song.title}</SongTitle>
-                <SongArtist>{song.artist}</SongArtist>
-
-                <FloatingIcon
-                    icon={faCheck}
-                    onClick={() => {
-                        toggleCheckButton(id, song.id)
-                    }}
-                    className={classNames(classes.checkSongIcon, song.checked ? classes.checkedSongIcon : '')}/>
-                <FloatingIcon
-                    icon={faPlus}
-                    onClick={() => {
-                        addToTodaysList(id, song.id)
-                    }}
-                    className={classes.addTodaySongIcon}/>
-            </Song>
+                <Song key={song.id} listId={id} songId={song.id} thumbnail_image_url={song.thumbnail_image_url}
+                    title={song.title} artist={song.artist}
+                    toggleCheckButton={toggleCheckButton}
+                      checked={song.checked} addToTodaysList={addToTodaysList} />
             );
         }
     );
@@ -103,7 +71,11 @@ const PlayList = observer(({id, title, songs, loadState, checkedSongs,
             <ListTitle>
                 {title}
 
-                <FloatingIcon icon={faPlus} className={classes.addSongIcon} />
+                <FloatingIcon
+                    icon={faPlus}
+                    className={classes.addSongIcon}
+                    onClick={() => {openAddSongDialog(id, title);}}
+                />
                 <FloatingIcon
                     icon={faTrashAlt}
                     className={classes.deleteListIcon}
