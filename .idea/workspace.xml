@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/playLists/AddSongDialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playLists/Song.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playLists/PlayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/PlayList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playLists/SongComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/StyledSongComponents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playLists/TodaysList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PlayListManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayListManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/playListsStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/playListsStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +148,20 @@
       <workItem from="1582634833336" duration="251000" />
       <workItem from="1582635691542" duration="2746000" />
       <workItem from="1582819767390" duration="16140000" />
-      <workItem from="1582887772264" duration="12266000" />
+      <workItem from="1582887772264" duration="13144000" />
+      <workItem from="1582913365373" duration="709000" />
+      <workItem from="1582914734510" duration="592000" />
+      <workItem from="1582918609176" duration="209000" />
+      <workItem from="1582919738237" duration="97000" />
+      <workItem from="1582931404267" duration="306000" />
+      <workItem from="1582932028651" duration="116000" />
+      <workItem from="1582981294503" duration="68000" />
+      <workItem from="1583114380676" duration="112000" />
+      <workItem from="1583114827814" duration="19000" />
+      <workItem from="1583114922512" duration="5000" />
+      <workItem from="1583115686114" duration="79000" />
+      <workItem from="1583115870225" duration="983000" />
+      <workItem from="1583118051595" duration="18000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -217,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582820083796</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="create AddSongDialog&#10;&#10;- send search-query&#10;- add song to list&#10;- delete songs from list">
+      <created>1582905787601</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582905787601</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,45 +256,46 @@
     <MESSAGE value="Connect with Rest API server&#10;&#10;- update login method&#10;- temporary logout view&#10;- get user's profile from the server" />
     <MESSAGE value="PlayList Init, Create, Delete&#10;&#10;- function: load initial data from server&#10;=&gt; should protect from the component re-rendering&#10;- function: create a new list&#10;- function: delete a new list" />
     <MESSAGE value="Add some resources and fix Error&#10;&#10;- add favicon, meta_og_image&#10;- fix: In CloseAddListDialog, no input then do not anything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some resources and fix Error&#10;&#10;- add favicon, meta_og_image&#10;- fix: In CloseAddListDialog, no input then do not anything" />
+    <MESSAGE value="create AddSongDialog&#10;&#10;- send search-query&#10;- add song to list&#10;- delete songs from list" />
+    <option name="LAST_COMMIT_MESSAGE" value="create AddSongDialog&#10;&#10;- send search-query&#10;- add song to list&#10;- delete songs from list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581953025396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581953025396" />
-    <state x="833" y="45" key="CommitChangelistDialog2" timestamp="1582820082453">
+    <state x="639" y="100" key="CommitChangelistDialog2" timestamp="1582905786185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="833" y="45" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582820082453" />
+    <state x="639" y="100" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582905786185" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582819925294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582819925294" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582894374765">
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1582931710919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582518461255" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374765" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582894374764">
+    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582931710919" />
+    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1582931710919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374764" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582894374761">
+    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582931710919" />
+    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1582931710919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374761" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582894374764">
+    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582931710919" />
+    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1582931710919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="195" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582518461254" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582894374764" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582575297044">
+    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582931710919" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582905807987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582575297044" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582905807987" />
     <state x="508" y="118" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582830400681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

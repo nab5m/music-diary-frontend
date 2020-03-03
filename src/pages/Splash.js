@@ -27,6 +27,7 @@ function Splash ({history, location}) {
             axios.get(Url, {params: {code: code}})
                 .then((response) => {
                     const data = response.data;
+                    console.log(response.data);
                     return onLoginSuccess(data, history);
                 })
                 .catch((error) => {

@@ -2,6 +2,8 @@ import {observable, action, decorate} from "mobx";
 import {SERVER_URL_PREFIX} from "../secrets/Constants";
 import axios from "axios";
 
+axios.defaults.withCredentials = true;
+
 class PlayListsStore {
     lists = [];
     todaysList = [];
@@ -78,7 +80,7 @@ class PlayListsStore {
                                 this.lists[i].songs[j] = { ...response.data, checked: false };
                             })
                             .catch((error) => {
-                                console.log(error);
+                                console.log(error.response);
                             });
                     }
                 }
@@ -87,7 +89,7 @@ class PlayListsStore {
                 this.loadState = "success";
             })
             .catch((error) => {
-                console.log(error);
+                console.log(error.response);
             });
     }
 
