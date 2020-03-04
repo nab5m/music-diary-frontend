@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
+import {STATIC_URL} from "../../secrets/Constants";
 
 const DefaultAppBar = ({url}) => {
     return (
@@ -12,19 +13,19 @@ const DefaultAppBar = ({url}) => {
                 </AppTitle>
                 <Navigation>
                     <IconButton to="/home">
-                        <Icon src="/icons/HomeIcon2.svg" alt="홈_아이콘" color="pink" isActive={url === "/home"}/>
+                        <Icon src={`${STATIC_URL}/icons/HomeIcon2.svg`} alt="홈_아이콘" color="pink" isActive={url === "/home"}/>
                     </IconButton>
                     <IconButton to="/play-list-manager">
-                        <Icon src="/icons/PlayList4.svg" alt="목록_아이콘" color="blue" isActive={url === "/play-list-manager"}/>
+                        <Icon src={`${STATIC_URL}/icons/PlayList4.svg`} alt="목록_아이콘" color="blue" isActive={url === "/play-list-manager"}/>
                     </IconButton>
                     <IconButton to="/calendar">
-                        <Icon src="/icons/calendar_today.svg" alt="달력_아이콘" color="pink" isActive={url === "/calendar"}/>
+                        <Icon src={`${STATIC_URL}/icons/calendar_today.svg`} alt="달력_아이콘" color="pink" isActive={url === "/calendar"}/>
                     </IconButton>
                     <IconButton to="/friends">
-                        <Icon src="/icons/FriendsIcon.svg" alt="친구_아이콘" color="blue" isActive={url === "/friends"}/>
+                        <Icon src={`${STATIC_URL}/icons/FriendsIcon.svg`} alt="친구_아이콘" color="blue" isActive={url === "/friends"}/>
                     </IconButton>
                     <IconButton to="/settings">
-                        <Icon src="/icons/settings.svg" alt="설정_아이콘" color="pink" isActive={url === "/settings"}/>
+                        <Icon src={`${STATIC_URL}/icons/settings.svg`} alt="설정_아이콘" color="pink" isActive={url === "/settings"}/>
                     </IconButton>
                 </Navigation>
             </Wrapper>

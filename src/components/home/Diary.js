@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Gallery from "./Gallery";
+import {STATIC_URL} from "../../secrets/Constants";
 
 const Diary = ({height="calc(100vh - 140px)", dateDisplay = "block",
                    weatherPosition, weatherTop, weatherLeftAndRight}) =>
@@ -10,7 +11,7 @@ const Diary = ({height="calc(100vh - 140px)", dateDisplay = "block",
             <Date style={{display: dateDisplay}}>2019년 11월 26일</Date>
 
             <Weather position={weatherPosition} top={weatherTop} leftAndRight={weatherLeftAndRight}>
-                <img src="/icons/sunny.gif" alt="날씨" width="45" height="45"/>
+                <img src={`${STATIC_URL}/icons/sunny.gif`} alt="날씨" width="45" height="45"/>
             </Weather>
 
             <Gallery />

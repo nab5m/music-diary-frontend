@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="" />
+    <list default="true" id="f66541e5-9c57-40a6-a965-4e6037d0f71e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/getHttpsConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jest/cssTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jest/fileTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/modules.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/pnpTs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppBar/DefaultAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/DefaultAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Diary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Splash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +81,14 @@
       <recent name="C:\Users\kimju\Documents\music_diary\frontend\src\components\home" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="build" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -68,6 +96,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.build" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -162,6 +194,12 @@
       <workItem from="1583115686114" duration="79000" />
       <workItem from="1583115870225" duration="983000" />
       <workItem from="1583118051595" duration="18000" />
+      <workItem from="1583269416966" duration="738000" />
+      <workItem from="1583271322117" duration="602000" />
+      <workItem from="1583272478666" duration="17000" />
+      <workItem from="1583272946061" duration="500000" />
+      <workItem from="1583273633398" duration="829000" />
+      <workItem from="1583275397232" duration="172000" />
     </task>
     <task id="LOCAL-00003" summary="MainLayout&#10;&#10; draw icons and add picture :)">
       <created>1574954809062</created>
@@ -260,10 +298,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="create AddSongDialog&#10;&#10;- send search-query&#10;- add song to list&#10;- delete songs from list" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581953025396">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583274264719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581953025396" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583274264719" />
     <state x="639" y="100" key="CommitChangelistDialog2" timestamp="1582905786185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
