@@ -10,7 +10,7 @@
 
 프론트엔드 : react.js<br/>
 백엔드 : django<br/><br/>
-Demo: http://music-diary.surge.sh<br/><br/>
+Demo: [AWS EC2에 업로드한 노래일기](http://ec2-15-165-171-10.ap-northeast-2.compute.amazonaws.com/)<br/><br/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 디버깅 과정
