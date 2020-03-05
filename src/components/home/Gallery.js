@@ -2,7 +2,7 @@ import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import React, {useState} from "react";
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {STATIC_URL} from "../../secrets/Constants";
+import {getStaticUrl} from "../../secrets/Constants";
 
 const Gallery = () => {
     const [curImageNo, setCurImageNo] = useState(1);
@@ -22,7 +22,7 @@ const Gallery = () => {
     return (
         <Container>
             <GalleryIcon icon={faChevronLeft} onClick={() => { handleClick("left") }} />
-            <GalleryImage src={`${STATIC_URL}/Gallery${curImageNo}.jpg`} width="230" height="auto" alt="랜덤사진" />
+            <GalleryImage src={`${getStaticUrl()}/Gallery${curImageNo}.jpg`} width="230" height="auto" alt="랜덤사진" />
             <GalleryIcon icon={faChevronRight} onClick={() => { handleClick("right") }} />
         </Container>
     );

@@ -1,5 +1,5 @@
 import {observable, action, decorate} from "mobx";
-import {SERVER_URL_PREFIX} from "../secrets/Constants";
+import {getServerUrl} from "../secrets/Constants";
 import axios from "axios";
 
 axios.defaults.withCredentials = true;
@@ -55,7 +55,7 @@ class PlayListsStore {
         ToDo: call Only one time
          */
 
-        const url = SERVER_URL_PREFIX + 'api/v1/play-list';
+        const url = getServerUrl() + 'api/v1/play-list';
         const requestData = {};
 
         if(this.loadState === "success") {
@@ -68,7 +68,7 @@ class PlayListsStore {
         await axios.get(url, {data: requestData})
             .then((response) => {
                 this.lists = response.data.results;
-                const url = SERVER_URL_PREFIX + 'api/v1/song/';
+                const url = getServerUrl() + 'api/v1/song/';
 
                 for (let i=0; i < this.lists.length; i++) {
                     const songs = this.lists[i].songs;
@@ -113,7 +113,7 @@ class PlayListsStore {
         this.addSongDialog.open = true;
     };
     sendSearchQuery = async (input, offset=0, limit=10) => {
-        const url = SERVER_URL_PREFIX + `api/v1/song/?search=${encodeURI(input)}&offset=${offset}&limit=${limit}`;
+        const url = getServerUrl() + `api/v1/song/?search=${encodeURI(input)}&offset=${offset}&limit=${limit}`;
 
         await axios.get(url)
             .then((response) => {
@@ -183,7 +183,7 @@ class PlayListsStore {
     };
 
     updateSongInfoInList = async (listId, songId) => {
-        const url = SERVER_URL_PREFIX + 'api/v1/song/' + songId;
+        const url = getServerUrl() + 'api/v1/song/' + songId;
 
         await axios.get(url)
             .then((response) => {
@@ -198,7 +198,7 @@ class PlayListsStore {
             });
     };
     addSongToMyList = async (listId, songId) => {
-        const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + listId + '/';
+        const url = getServerUrl() + 'api/v1/play-list/' + listId + '/';
         const requestData = { songs: this.getSongsFromList(listId).concat([songId]) };
 
         await axios.patch(url, requestData)
@@ -237,7 +237,7 @@ class PlayListsStore {
         }
     };
     removeSongFromMyList = async (listId, songId) => {
-        const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + listId + '/';
+        const url = getServerUrl() + 'api/v1/play-list/' + listId + '/';
         const requestData = {
             songs: this.getSongsFromList(listId).filter((item) => {
                 return item !== songId;
@@ -259,7 +259,7 @@ class PlayListsStore {
     };
     closeAddListDialog = (title) => {
         if(title) {
-            const url = SERVER_URL_PREFIX + 'api/v1/play-list/';
+            const url = getServerUrl() + 'api/v1/play-list/';
             const requestData = {title: title};
 
             axios.post(url, {...requestData})
@@ -283,7 +283,7 @@ class PlayListsStore {
     };
     closeDeleteListDialog = async (id) => {
         if(id !== -1) { // clicked ok button
-            const url = SERVER_URL_PREFIX + 'api/v1/play-list/' + id + '/';
+            const url = getServerUrl() + 'api/v1/play-list/' + id + '/';
 
             await axios.delete(url)
                 .then((response) => {

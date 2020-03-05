@@ -1,6 +1,6 @@
 import {observable, action, decorate} from "mobx";
 import axios from 'axios';
-import {SERVER_URL_PREFIX} from "../secrets/Constants";
+import {getServerUrl} from "../secrets/Constants";
 
 axios.defaults.withCredentials = true;
 
@@ -15,7 +15,7 @@ class UserProfileStore {
     };
 
     loadData = () => {
-        const url = SERVER_URL_PREFIX + 'user/';
+        const url = getServerUrl() + 'user/';
         const requestData = {};
 
         axios.get(url, {data: requestData})
@@ -42,7 +42,7 @@ class UserProfileStore {
             });
     };
     logout = () => {
-        const url = SERVER_URL_PREFIX + 'logout/';
+        const url = getServerUrl() + 'logout/';
         const requestData = {};
 
         axios.get(url, {data: requestData})

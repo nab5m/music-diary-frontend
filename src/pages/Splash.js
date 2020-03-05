@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import queryString from 'query-string';
 import axios from "axios";
-import {SERVER_URL_PREFIX, STATIC_URL} from "../secrets/Constants";
+import {getServerUrl, getStaticUrl} from "../secrets/Constants";
 
 axios.defaults.withCredentials = true;
 
@@ -22,7 +22,7 @@ function Splash ({history, location}) {
 
     useEffect(() => {
         if(query.code) {
-            const Url = SERVER_URL_PREFIX + 'oauth/';
+            const Url = getServerUrl() + 'oauth/';
             const code = query.code;
             axios.get(Url, {params: {code: code}})
                 .then((response) => {
@@ -45,7 +45,7 @@ function Splash ({history, location}) {
 
     return (
         <SplashContainer>
-            <SplashImage src={`${STATIC_URL}/splash2.gif`} alt="스플래시_로고"/>
+            <SplashImage src={`${getStaticUrl()}/splash2.gif`} alt="스플래시_로고"/>
             <Copyright>
                 &copy; 2019 nab5m, All rights reserved.
             </Copyright>

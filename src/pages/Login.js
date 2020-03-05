@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import {SERVER_URL_PREFIX} from "../secrets/Constants";
+import {getServerUrl} from "../secrets/Constants";
 import axios from "axios";
 
 const Login = () => {
     useEffect(() => {
-         const Url = SERVER_URL_PREFIX + 'request-login-url';
+         const Url = getServerUrl() + 'request-login-url';
          axios.get(Url)
              .then((response) => {
                  const data = response.data;
